@@ -1,0 +1,2 @@
+Date/Time,Wind Dir Min,Wind Dir Ave,Wind Dir Max,Wind Speed Min,Wind Speed Ave,Wind Speed Max,Air Temp,Humidity,Air Pressure,Rain Accum,Rain Duration,Rain Intensity,Hail Accum,Hail Duration,Hail Intensity
+YYYY-MM-DD HH:MM:SS,Deg,Deg,Deg,m/s,m/s,m/s,Celsius,%RH,hPa,mm,seconds,mm/h,hits/cm2,seconds,hits/cm2/h

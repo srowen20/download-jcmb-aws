@@ -28,7 +28,11 @@ for ((i=0; i<days_prior; i++)); do
   url=$(date -d "-$i days" +"$url_format")
   
   # Download the file to the specified directory
-  wget "$url" -O "${output_dir}/${date}_minute_data.csv"
-  
-  echo "Downloaded: ${output_dir}/${date}_minute_data.csv"
+  dest="${output_dir}/${date}_minute_data.csv"
+  if wget "$url" -O "$dest"; then
+    echo "Downloaded: $dest"
+  else
+    echo "ERROR: failed to download $url - removing partial/error file at $dest" >&2
+    rm -f "$dest"
+  fi
 done
